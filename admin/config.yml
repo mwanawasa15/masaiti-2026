@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
-  branch: main # or master
+  name: github
+  repo: mwanawasa15/masaiti-2026 # e.g., mwanawasa/masaiti-2026
+  branch: main
+  base_url: https://api.github.com
+  site_domain: lyuumbo-masaiti-2026.pages.dev
 
 media_folder: "images"
 public_folder: "/images"
@@ -10,9 +13,6 @@ collections:
     label: "Campaign Updates"
     folder: "updates"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
