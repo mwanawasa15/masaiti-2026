@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miyanda Mafupa Lyuumbo | Masaiti 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@3.11.0/dist/geosearch.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+    /* Fixes the search bar position so it doesn't hide behind the nav */
+    .leaflet-control-geosearch { 
+        margin-top: 70px !important; 
+        width: 300px;
+    }
+</style>
+    <style>
+        .countdown-box {
+    background: rgba(30, 58, 138, 0.1);
+    border: 1px solid rgba(30, 58, 138, 0.2);
+    border-radius: 8px;
+    padding: 1rem;
+}
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('images/miya 1.jpg');
+            background-size: cover;
+            background-position: center top;
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<style>
+    /* This sets the size of your map */
+    #map { 
+        height: 450px; 
+        width: 100%; 
+        border-radius: 12px; 
+        border: 2px solid #1e3a8a; 
+        margin-top: 20px;
+        z-index: 1; /* Ensures it doesn't overlap your navigation menu */
+    }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <nav class="sticky top-0 bg-white shadow-sm z-50 p-4 border-b-2 border-blue-800">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="font-bold text-xl tracking-tight uppercase">M.M. <span class="text-blue-800">LYUUMBO</span></h1>
+            <div class="hidden md:flex space-x-6 font-semibold text-sm uppercase tracking-wide">
+                <a href="#vision" class="hover:text-blue-800 transition">The Vision</a>
+                <a href="#profile" class="hover:text-blue-800 transition">Candidate Profile</a>
+                <a href="#contact" class="bg-blue-800 text-white px-5 py-2 rounded-sm hover:bg-blue-900 transition">Get Involved</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-bg min-h-[70vh] flex items-center text-white text-center px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Leadership with a Difference</h2>
+            <p class="text-xl md:text-2xl mb-8 font-light italic text-blue-200">"If Not Now, Then When?"</p>
+            <p class="mb-10 text-lg opacity-90 max-w-2xl mx-auto leading-relaxed">
+                Precision in your appearance reflects precision in your process. We are relentless in pursuing the target: A prosperous Masaiti for all.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#vision" class="bg-white text-blue-900 px-8 py-3 rounded-sm font-bold hover:bg-slate-100">Our Agenda</a>
+                <a href="#contact" class="bg-blue-600 text-white px-8 py-3 rounded-sm font-bold hover:bg-blue-700 underline">Join the Movement</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="vision" class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-blue-800 font-bold tracking-widest uppercase text-sm">A Call for Excellence</span>
+                <h3 class="text-4xl font-bold mt-2 mb-6">Rising to the Occasion</h3>
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    True representation is most sustainable when built on merit and competence. We must move from observation to participation, investing in education and positioning Masaiti as a powerhouse of talent.
+                </p>
+                <blockquote class="border-l-4 border-blue-800 pl-6 italic text-slate-800 mb-6">
+                    "We are not asking for a seat at the table because of our heritage; we are claiming a seat because of our capability."
+                </blockquote>
+                <p class="font-bold text-blue-900 uppercase tracking-tighter">#umwanawelambamwilamba</p>
+            </div>
+            <div class="relative">
+                <img src="images/miya 2.jpg" alt="National Service" class="rounded-lg shadow-xl relative z-10">
+                <div class="absolute -bottom-4 -right-4 w-full h-full border-2 border-blue-800 rounded-lg -z-0"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-slate-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div><span class="text-3xl font-bold">28k+</span><p class="text-xs text-slate-400 uppercase">Voters</p></div>
+            <div><span class="text-3xl font-bold">6</span><p class="text-xs text-slate-400 uppercase">Wards</p></div>
+            <div><span class="text-3xl font-bold">20+</span><p class="text-xs text-slate-400 uppercase">Years Leadership</p></div>
+            <div><span class="text-3xl font-bold">Aug 13</span><p class="text-xs text-slate-400 uppercase">Election Day</p></div>
+        </div>
+    </section>
+
+    <section id="profile" class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center gap-16">
+            <div class="md:w-1/2">
+                <h3 class="text-3xl font-bold mb-6 text-blue-900">Distinguished Leadership</h3>
+                <p class="text-slate-700 leading-relaxed mb-6">
+                    Miyanda Mafupa Lyuumbo is a formidable corporate leader. From **MTN** to **Zambian Breweries**, and currently as CEO of **Roland Imperial Tobacco**, he has a proven track record of operational excellence.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-2 rounded-full mr-4 text-blue-800"><i class="fas fa-university"></i></div>
+                        <div><h5 class="font-bold">Academic Foundation</h5><p class="text-sm text-slate-500">MBA, BBA, Marketing & Insurance Studies</p></div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-2 rounded-full mr-4 text-blue-800"><i class="fas fa-briefcase"></i></div>
+                        <div><h5 class="font-bold">Corporate Success</h5><p class="text-sm text-slate-500">Former Head of Sales (MTN), Territory Manager (Zambian Breweries)</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 text-center">
+                <img src="images/Miya 3.jpg" alt="CEO Leadership" class="rounded-lg shadow-2xl grayscale hover:grayscale-0 transition-all duration-500 max-h-[500px] mx-auto">
+            </div>
+        </div>
+    </section>
+    <section id="social" class="py-16 px-6 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-2xl font-bold mb-8 text-blue-900 uppercase">Updates from the Field</h3>
+        <div class="flex justify-center">
+            <div class="fb-page" 
+                 data-href="https://www.facebook.com/https://www.facebook.com/miyandamafupa.lyuumbo" 
+                 data-tabs="timeline" 
+                 data-width="500" 
+                 data-height="600" 
+                 data-small-header="false" 
+                 data-adapt-container-width="true" 
+                 data-hide-cover="false" 
+                 data-show-facepile="true">
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v19.0"></script>
+    <section id="polling-map" class="py-16 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+        <h3 class="text-2xl font-bold mb-4 text-blue-900 uppercase">Find Your 2026 Polling Station</h3>
+        <p class="mb-6 text-slate-600">
+            Masaiti District has 94 Polling Districts. Use the map below to find key voting centers in the constituency.
+        </p>
+        
+        <div id="map"></div>
+        
+        <p class="text-xs text-slate-400 mt-4 italic">
+            *Locations are approximate. Always verify your station via the ECZ portal or dial *214#.
+        </p>
+    </div>
+</section>
+
+    <section id="contact" class="bg-slate-100 py-20 px-6">
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-blue-900 mb-4 uppercase tracking-tight">Join the Campaign Team</h3>
+            <p class="text-slate-600">Be a part of the change in Masaiti. Register your interest to volunteer.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-800">
+            <form action="https://formspree.io/f/xykblajj" method="POST" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2 tracking-wide uppercase text-xs">Full Name</label>
+                        <input type="text" name="name" required class="w-full p-3 bg-slate-50 border border-slate-200 rounded focus:border-blue-800 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2 tracking-wide uppercase text-xs">WhatsApp Number</label>
+                        <input type="tel" name="phone" placeholder="097..." required class="w-full p-3 bg-slate-50 border border-slate-200 rounded focus:border-blue-800 outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2 tracking-wide uppercase text-xs">Your Ward in Masaiti</label>
+                    <select name="ward" required class="w-full p-3 bg-slate-50 border border-slate-200 rounded focus:border-blue-800 outline-none">
+                        <option value="">Select Your Ward</option>
+                        <option value="Majengo">Majengo Ward</option>
+                        <option value="Masaiti">Masaiti Ward</option>
+                        <option value="Mishikishi">Mishikishi Ward</option>
+                        <option value="Masangano">Masangano Ward</option>
+                        <option value="Shimibanga">Shimibanga Ward</option>
+                        <option value="Sulu">Sulu Ward</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2 tracking-wide uppercase text-xs">How would you like to help?</label>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <label class="flex items-center space-x-2"><input type="checkbox" name="help[]" value="Social Media"> <span>Social Media Ambassador</span></label>
+                        <label class="flex items-center space-x-2"><input type="checkbox" name="help[]" value="Door-to-Door"> <span>Door-to-Door Canvassing</span></label>
+                        <label class="flex items-center space-x-2"><input type="checkbox" name="help[]" value="Poll Watching"> <span>Election Day Poll Watching</span></label>
+                        <label class="flex items-center space-x-2"><input type="checkbox" name="help[]" value="Mobilization"> <span>Community Mobilization</span></label>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-blue-800 text-white py-4 rounded font-bold hover:bg-blue-900 transition shadow-md uppercase tracking-widest text-sm">
+                    Submit Volunteer Application
+                </button>
+            </form>
+        </div>
+        
+        <div class="mt-12 text-center">
+            <p class="text-slate-500 mb-4 italic text-sm uppercase">Or contact us directly</p>
+            <a href="https://wa.me/260761222111" class="inline-flex items-center text-green-600 font-bold hover:underline text-lg">
+                <i class="fab fa-whatsapp mr-2 text-2xl"></i> Campaign WhatsApp Hub
+            </a>
+        </div>
+    </div>
+</section>
+    <section class="py-16 px-6 bg-white border-t border-slate-100">
+    <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-2xl font-bold mb-8 text-blue-900 uppercase tracking-wide">Election Day Countdown</h3>
+        
+        <div class="grid grid-cols-4 gap-4 mb-12" id="countdown">
+            <div class="countdown-box"><span id="days" class="text-3xl font-bold text-blue-800">00</span><p class="text-xs uppercase">Days</p></div>
+            <div class="countdown-box"><span id="hours" class="text-3xl font-bold text-blue-800">00</span><p class="text-xs uppercase">Hrs</p></div>
+            <div class="countdown-box"><span id="minutes" class="text-3xl font-bold text-blue-800">00</span><p class="text-xs uppercase">Min</p></div>
+            <div class="countdown-box"><span id="seconds" class="text-3xl font-bold text-blue-800">00</span><p class="text-xs uppercase">Sec</p></div>
+        </div>
+
+        <div class="bg-blue-50 p-8 rounded-lg border-2 border-dashed border-blue-200">
+            <h4 class="font-bold text-xl mb-4">Are You Ready to Vote?</h4>
+            <p class="text-slate-600 mb-6">Ensure your details are correct in the ECZ Provisional Register.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://ovr.elections.org.zm/" target="_blank" class="bg-blue-800 text-white px-6 py-3 rounded hover:bg-blue-900 transition font-bold">Verify Online (ECZ Portal)</a>
+                <div class="bg-white border border-blue-200 px-6 py-3 rounded font-mono font-bold text-blue-800">Dial *214#</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 px-6 text-center">
+        <div class="mb-4">
+            <p class="text-white font-bold text-lg">#TheChosenOne | #Masaiti2026</p>
+            <p class="text-xs uppercase tracking-widest italic mt-2">Nashilisha, natota mwane....</p>
+        </div>
+        <div class="border-t border-slate-800 pt-8 mt-8">
+            <p class="text-xs text-slate-500 tracking-wide uppercase">
+                Designed and Developed by <span class="text-blue-400 font-semibold">Mwanawasa Mafupa Lyuumbo</span>
+            </p>
+        </div>
+    </footer>
+<script>
+    const electionDate = new Date("August 13, 2026 06:00:00").getTime();
+
+    const timer = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = electionDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+
+        if (distance < 0) {
+            clearInterval(timer);
+            document.getElementById("countdown").innerHTML = "ELECTION DAY IS HERE";
+        }
+    }, 1000);
+</script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-geosearch@3.11.0/dist/bundle.min.js"></script>
+
+<script>
+    // 1. Initialize Map
+    var map = L.map('map').setView([-13.2500, 28.5833], 10); 
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+    // 2. Add Search Bar (The Geosearch Control)
+    const searchControl = new GeoSearch.GeoSearchControl({
+        provider: new window.GeoSearch.OpenStreetMapProvider(),
+        style: 'bar',
+        showMarker: true,
+        autoClose: true,
+        searchLabel: 'Search village or school...'
+    });
+    map.addControl(searchControl);
+
+    // 3. Add your Polling Station Pins
+    var stations = [
+        { name: "Masaiti Boma", coords: [-13.279, 28.591] },
+        { name: "Mishikishi School", coords: [-13.158, 28.512] }
+    ];
+    stations.forEach(s => L.marker(s.coords).addTo(map).bindPopup(s.name));
+</script>
+</body>
+</html>
