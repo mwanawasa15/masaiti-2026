@@ -2,7 +2,22 @@ backend:
   name: github
   repo: mwanawasa15/masaiti-2026
   branch: main
-  base_url: https://api.netlify.com # This is the magic bridge
+  base_url: https://api.netlify.com
   auth_endpoint: auth
   site_domain: lyuumbo-masaiti-2026.pages.dev
-  app_id: YOUR_CLIENT_ID_HERE # Paste your actual Client ID here
+  app_id: YOUR_ACTUAL_CLIENT_ID_HERE # Replace this!
+
+display_url: https://lyuumbo-masaiti-2026.pages.dev
+publish_mode: editorial_workflow
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "updates"
+    label: "Campaign Updates"
+    folder: "updates"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
