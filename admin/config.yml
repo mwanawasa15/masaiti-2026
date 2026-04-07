@@ -5,7 +5,7 @@ backend:
   base_url: https://api.netlify.com
   auth_endpoint: auth
   site_domain: lyuumbo-masaiti-2026.pages.dev
-  app_id: YOUR_ACTUAL_CLIENT_ID_HERE # Replace this!
+  app_id: Ov23lipiRq7scvCAlG4U # Replace this!
 
 display_url: https://lyuumbo-masaiti-2026.pages.dev
 publish_mode: editorial_workflow
